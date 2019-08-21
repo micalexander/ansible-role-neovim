@@ -1,0 +1,5 @@
+---
+- name: Install list of packages
+  homebrew:
+    state: present
+    name: ['neovim']
