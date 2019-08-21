@@ -56,6 +56,8 @@ galaxy_info:
     #       Maximum 20 tags per role.
 
 dependencies:
+
+  - { role: geerlingguy.homebrew, when: ansible_distribution == 'MacOSX' }
   - role: micalexander.python2
     vars:
       pip2_install: ['neovim']
