@@ -67,6 +67,7 @@ dependencies:
   - role: micalexander.ruby
     vars:
       gem_install: ['neovim']
+      user: root
   - role: micalexander.node
     vars:
       npm_install: ['neovim']
