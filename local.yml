@@ -1,0 +1,15 @@
+---
+- name: Setup hosts
+  hosts: localhost
+  pre_tasks:
+    - name: add 127.0.0.1 to localhost group
+      add_host: 
+        name: 127.0.0.1
+        group: localhost             
+- name: Install neovim
+  hosts: localhost
+  tasks:
+    - name: Install requirements
+      raw: ansible-galaxy install -r {{ playbook_dir }}/requirements.yml -f
+    - include_role: 
+        name: micalexander.neovim
